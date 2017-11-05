@@ -44,7 +44,7 @@ bintray {
         desc = libraryDescription
         websiteUrl = libraryUrl
         issueTrackerUrl = libraryIssuesUrl
-        vcsUrl = gitUrl
+        vcsUrl = libraryVcsUrl
         licenses = allLicenses
         publish = toPublishLibrary
         publicDownloadNumbers = toPublicDownloadNumbers
