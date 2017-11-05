@@ -34,8 +34,8 @@ Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 bintray {
-    user = properties.hasProperty("bintrayUser") ? properties.getProperty("bintrayUser") : project.property("bintrayUser")
-    key = properties.hasProperty("bintrayApiKey") ? properties.getProperty("bintrayApiKey") : project.property("bintrayApiKey")
+    user = properties.getProperty("bintrayUser") 
+    key = properties.getProperty("bintrayApiKey")
 
     configurations = ['archives']
     pkg {
@@ -54,8 +54,8 @@ bintray {
             vcsTag = libraryVcsUrl
             desc = libraryDescription
             gpg {
-                sign = properties.hasProperty("bintrayWithGpgSign") ? properties.getProperty("bintrayWithGpgSign") : project.property("bintrayWithGpgSign")
-                passphrase = properties.hasProperty("bintrayGpgPassword") ? properties.getProperty("bintrayGpgPassword") : project.property("bintrayGpgPassword")
+                sign = properties.hasProperty("bintrayWithGpgSign") ? properties.getProperty("bintrayWithGpgSign") : false
+                passphrase = properties.hasProperty("bintrayGpgPassword") ? properties.getProperty("bintrayGpgPassword") : null
             }
         }
     }
