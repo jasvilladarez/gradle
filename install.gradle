@@ -11,7 +11,7 @@ install {
                 artifactId publishedArtifact
 
                 name libraryName
-                description libraryDesciption
+                description libraryDescription
                 url libraryUrl
 
                 licenses {
